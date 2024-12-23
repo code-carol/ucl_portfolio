@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url(./assets/imgs/wallpaper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.statusbar {
+  position: fixed;
+  bottom: 0;
+  padding: 3vh 100vh;
+  background-color: #433878;
+}
