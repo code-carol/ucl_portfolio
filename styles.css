@@ -16,8 +16,29 @@ body {
 }
 
 .statusbar {
-  position: fixed;
   bottom: 0;
-  padding: 3vh 100vh;
   background-color: #433878;
+  padding: 1.5vh;
+  width: 100%;
+  position: fixed;
+}
+
+.icon {
+  margin: 5vh 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 15vh;
+  font-size: 1.8vh;
+}
+
+.icon-img {
+  width: 10vh;
+  margin-bottom: 1vh;
+}
+
+.start-button {
+  padding: 0.5vh 2vh;
+  font-size: 2.5vh;
 }
