@@ -26,15 +26,26 @@ body {
   position: fixed;
 }
 
+.icons-rows {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3vh;
+}
+
 .icon {
-  margin: 5vh 2vh;
+  margin: 2vh 2vh;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   width: 15vh;
+  height: 16vh;
   font-size: 1.5vh;
   cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #43387877;
 }
 
 .icon-img {
@@ -43,6 +54,7 @@ body {
 }
 
 .start-button {
+  margin: 0vh 1vh;
   padding: 0.5vh 2vh;
   font-size: 2.5vh;
   cursor: pointer;
