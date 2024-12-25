@@ -1,26 +1,29 @@
-// Make the DIV element draggable:
-dragElement(document.getElementById("my-project")!);
+// Make all elements with the class "draggable" draggable:
+document.querySelectorAll(".window").forEach((element) => {
+  dragElement(element as HTMLElement);
+  addWindowTapHandling(element as HTMLElement);
+});
 
-function dragElement(elmnt: HTMLElement) {
-  let pos1 = 0,
-    pos2 = 0,
-    pos3 = 0,
-    pos4 = 0;
+function dragElement(el: HTMLElement) {
+  let initialX = 0,
+    initialY = 0,
+    currentX = 0,
+    currentY = 0;
 
-  const header = elmnt.querySelector(".title-bar");
+  const header = el.querySelector(".title-bar");
   if (header) {
     // If present, the header is where you move the DIV from:
     (header as HTMLElement).onmousedown = dragMouseDown;
   } else {
     // Otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
+    el.onmousedown = dragMouseDown;
   }
 
   function dragMouseDown(e: MouseEvent): void {
     e.preventDefault();
     // Get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
+    initialX = e.clientX;
+    initialY = e.clientY;
     document.onmouseup = closeDragElement;
     // Call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -29,18 +32,45 @@ function dragElement(elmnt: HTMLElement) {
   function elementDrag(e: MouseEvent): void {
     e.preventDefault();
     // Calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
+    currentX = initialX - e.clientX;
+    currentY = initialY - e.clientY;
+    initialX = e.clientX;
+    initialY = e.clientY;
     // Set the element's new position:
-    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    el.style.top = el.offsetTop - currentY + "px";
+    el.style.left = el.offsetLeft - currentX + "px";
   }
 
   function closeDragElement(): void {
     // Stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+  }
+}
+
+let biggestIndex: number = 0; // Initialize biggestIndex
+let selectedIcon: HTMLElement | null = null; // Keep track of the selected icon
+
+function addWindowTapHandling(element: HTMLElement): void {
+  element.addEventListener("mousedown", () => handleWindowTap(element));
+}
+
+function openWindow(element: HTMLElement): void {
+  element.style.display = "flex";
+  biggestIndex++; // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex.toString();
+}
+
+function handleWindowTap(element: HTMLElement): void {
+  biggestIndex++; // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex.toString();
+
+  deselectIcon(selectedIcon);
+}
+
+function deselectIcon(icon: HTMLElement | null): void {
+  if (icon) {
+    // Logic to deselect the icon, e.g., remove active class or change styles
+    icon.classList.remove("active"); // Example logic
   }
 }

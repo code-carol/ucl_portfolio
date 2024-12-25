@@ -69,13 +69,24 @@ body {
   box-shadow: -2px -2px 0 black, /* Top and left */ 2px 2px 0 white; /* Bottom and right */
 }
 
-.my-projects {
+#finder {
+  background-color: aliceblue;
+  width: 100vh;
+  height: 40vh;
+  position: absolute;
+  top: 8vh;
+  left: 30vh;
+  border: 1px solid black;
+}
+
+#my-projects {
   background-color: aliceblue;
   width: 100vh;
   height: 80vh;
   position: absolute;
   top: 8vh;
   left: 60vh;
+  border: 1px solid black;
 }
 
 .title-bar {
