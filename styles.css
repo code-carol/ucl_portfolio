@@ -77,3 +77,8 @@ body {
   top: 8vh;
   left: 60vh;
 }
+
+.title-bar {
+  background-color: #433878;
+  padding: 2vh;
+}
