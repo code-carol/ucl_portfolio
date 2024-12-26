@@ -53,20 +53,29 @@ body {
   margin-bottom: 1vh;
 }
 
-.start-button {
-  margin: 0vh 1vh;
-  padding: 0.5vh 2vh;
-  font-size: 2.5vh;
-  cursor: pointer;
-  background-color: #433878;
+.btn {
   color: aliceblue;
-  letter-spacing: 2px;
+  background-color: #433878;
+  cursor: pointer;
   border: none;
   box-shadow: -2px -2px 0 white, /* Top and left */ 2px 2px 0 black; /* Bottom and right */
 }
 
-.start-button:active {
+.btn:active {
   box-shadow: -2px -2px 0 black, /* Top and left */ 2px 2px 0 white; /* Bottom and right */
+}
+
+.start-btn {
+  margin: 0vh 1vh;
+  padding: 0.5vh 2vh;
+  font-size: 2.5vh;
+  letter-spacing: 2px;
+}
+
+.close-btn {
+  font-size: 2vh;
+  text-transform: uppercase;
+  padding: 0.5vh 1vh;
 }
 
 #finder {
@@ -91,5 +100,5 @@ body {
 
 .title-bar {
   background-color: #433878;
-  padding: 2vh;
+  padding: 1vh;
 }
