@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
+:root {
+  --softWhite: aliceblue;
+  --purple: #433878;
+  --purpleHover: #43387877;
+}
+
 * {
   margin: 0;
 }
@@ -20,7 +26,7 @@ body {
 
 .statusbar {
   bottom: 0;
-  background-color: #433878;
+  background-color: var(--purple);
   padding: 1.5vh;
   width: 100%;
   position: fixed;
@@ -33,10 +39,10 @@ body {
 }
 
 .icon {
-  margin: 2vh 2vh;
+  margin: 1vh 2vh;
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   width: 15vh;
   height: 16vh;
@@ -45,7 +51,7 @@ body {
 }
 
 .icon:hover {
-  background-color: #43387877;
+  background-color: var(--purpleHover);
 }
 
 .icon-img {
@@ -54,15 +60,15 @@ body {
 }
 
 .btn {
-  color: aliceblue;
-  background-color: #433878;
+  color: var(--softWhite);
+  background-color: var(--purple);
   cursor: pointer;
   border: none;
-  box-shadow: -2px -2px 0 white, /* Top and left */ 2px 2px 0 black; /* Bottom and right */
+  box-shadow: -1.5px -1.5px 0 white, /* Top and left */ 1.5px 1.5px 0 black; /* Bottom and right */
 }
 
 .btn:active {
-  box-shadow: -2px -2px 0 black, /* Top and left */ 2px 2px 0 white; /* Bottom and right */
+  box-shadow: -1.5px -1.5px 0 black, /* Top and left */ 1.5px 1.5px 0 white; /* Bottom and right */
 }
 
 .start-btn {
@@ -72,14 +78,22 @@ body {
   letter-spacing: 2px;
 }
 
+.title-bar {
+  background-color: var(--purple);
+  padding: 0.5vh;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
 .close-btn {
-  font-size: 2vh;
+  font-size: 1.8vh;
   text-transform: uppercase;
   padding: 0.5vh 1vh;
 }
 
 #finder {
-  background-color: aliceblue;
+  background-color: var(--softWhite);
   width: 100vh;
   height: 40vh;
   position: absolute;
@@ -89,16 +103,11 @@ body {
 }
 
 #my-projects {
-  background-color: aliceblue;
+  background-color: var(--softWhite);
   width: 100vh;
   height: 80vh;
   position: absolute;
   top: 8vh;
   left: 60vh;
   border: 1px solid black;
-}
-
-.title-bar {
-  background-color: #433878;
-  padding: 1vh;
 }
