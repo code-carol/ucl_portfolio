@@ -4,16 +4,18 @@ document.querySelectorAll(".window").forEach((el) => {
   addWindowTapHandling(el as HTMLElement);
 });
 
+// Drag functionality
+
 function dragElement(el: HTMLElement) {
   let initialX = 0,
     initialY = 0,
     currentX = 0,
     currentY = 0;
 
-  const header = el.querySelector(".title-bar");
-  if (header) {
-    // If present, the header is where you move the DIV from:
-    (header as HTMLElement).onmousedown = dragMouseDown;
+  const titleBar = el.querySelector(".title-bar");
+  if (titleBar) {
+    // If present, the tile bar is where you move the DIV from:
+    (titleBar as HTMLElement).onmousedown = dragMouseDown;
   } else {
     // Otherwise, move the DIV from anywhere inside the DIV:
     el.onmousedown = dragMouseDown;
@@ -48,6 +50,8 @@ function dragElement(el: HTMLElement) {
   }
 }
 
+// Moveable window functionality
+
 let biggestIndex: number = 0; // Initialize biggestIndex
 let selectedIcon: HTMLElement | null = null; // Keep track of the selected icon
 
@@ -55,7 +59,7 @@ function addWindowTapHandling(el: HTMLElement): void {
   el.addEventListener("mousedown", () => handleWindowTap(el));
 }
 
-function openWindow(el: HTMLElement): void {
+function moveWindow(el: HTMLElement): void {
   el.style.display = "flex";
   biggestIndex++; // Increment biggestIndex by 1
   el.style.zIndex = biggestIndex.toString();
@@ -70,7 +74,62 @@ function handleWindowTap(el: HTMLElement): void {
 
 function deselectIcon(el: HTMLElement | null): void {
   if (el) {
-    // Logic to deselect the icon, e.g., remove active class or change styles
-    el.classList.remove("active"); // Example logic
+    el.classList.remove("active");
   }
 }
+
+// Open and close window functionality
+
+function openWindow(el: HTMLElement): void {
+  el.style.display = "block";
+}
+
+function closeWindow(el: HTMLElement): void {
+  el.style.display = "none";
+}
+
+// Add event listeners to open buttons
+const windowOpens = document.querySelectorAll(
+  ".icon"
+) as NodeListOf<HTMLElement>;
+
+windowOpens.forEach((openButton) => {
+  openButton.addEventListener("click", function () {
+    const targetSelector = openButton.getAttribute("data-target");
+    if (targetSelector) {
+      const windowToOpen = document.querySelector(
+        targetSelector
+      ) as HTMLElement;
+      if (windowToOpen) {
+        openWindow(windowToOpen); // Open the specific window
+      } else {
+        console.error(`Element with selector "${targetSelector}" not found.`);
+      }
+    } else {
+      console.error("No target specified in data-target attribute.");
+    }
+  });
+});
+
+// Add event listeners to close buttons
+const closeButtons = document.querySelectorAll(
+  ".close-btn"
+) as NodeListOf<HTMLElement>;
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const targetSelector = button.getAttribute("data-target");
+    if (targetSelector) {
+      const windowToClose = document.querySelector(
+        targetSelector
+      ) as HTMLElement;
+      if (windowToClose) {
+        closeWindow(windowToClose); // Close the specific window
+      } else {
+        console.error(`Element with selector "${targetSelector}" not found.`);
+      }
+    } else {
+      console.error("No target specified in data-target attribute.");
+    }
+  });
+});
