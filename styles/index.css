@@ -80,34 +80,48 @@ body {
 
 .title-bar {
   background-color: var(--purple);
-  padding: 0.5vh;
   display: flex;
   justify-content: end;
   align-items: end;
+  height: 4vh;
 }
 
 .close-btn {
   font-size: 1.8vh;
   text-transform: uppercase;
   padding: 0.5vh 1vh;
+  margin-bottom: 0.8vh;
+}
+
+.window {
+  position: absolute;
+  border: 8px solid var(--purple);
+  background-color: var(--softWhite);
+  border-radius: 0.5vh;
 }
 
 #finder {
-  background-color: var(--softWhite);
-  width: 100vh;
-  height: 40vh;
-  position: absolute;
-  top: 8vh;
-  left: 30vh;
-  border: 1px solid black;
+  width: 50vw;
+  height: 50vh;
+  top: 15vh;
+  left: 60vh;
+  display: none;
 }
 
 #my-projects {
-  background-color: var(--softWhite);
-  width: 100vh;
+  width: 100vw;
   height: 80vh;
-  position: absolute;
   top: 8vh;
   left: 60vh;
-  border: 1px solid black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: calc(100% - 4vh);
+}
+
+.nav {
+  border: 1px solid red;
+  height: 100%;
 }

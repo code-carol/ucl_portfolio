@@ -21,7 +21,10 @@
     <div class="homescreen">
       <div class="icons-rows">
         <div class="icons-container">
-          <div class="icon">
+          <div
+            class="icon"
+            data-target="#finder"
+          >
             <img
               src="./assets/imgs/this_computer.png"
               alt="folder icon"
@@ -29,7 +32,10 @@
             />
             <h3>My Projects</h3>
           </div>
-          <div class="icon">
+          <div
+            class="icon"
+            data-target="#finder"
+          >
             <img
               src="./assets/imgs/folder_closed.png"
               alt="folder icon"
@@ -37,7 +43,10 @@
             />
             <h3>Goals</h3>
           </div>
-          <div class="icon">
+          <div
+            class="icon"
+            data-target="#finder"
+          >
             <img
               src="./assets/imgs/folder_closed.png"
               alt="folder icon"
@@ -45,7 +54,10 @@
             />
             <h3>Skills</h3>
           </div>
-          <div class="icon">
+          <div
+            class="icon"
+            data-target="#finder"
+          >
             <img
               src="./assets/imgs/recycle_bin_full.png"
               alt="folder icon"
@@ -55,7 +67,10 @@
           </div>
         </div>
         <div class="icons-container">
-          <div class="icon">
+          <div
+            class="icon"
+            data-target="#finder"
+          >
             <img
               src="./assets/imgs/image_editor.png"
               alt="folder icon"
@@ -63,7 +78,10 @@
             />
             <h3>Images</h3>
           </div>
-          <div class="icon">
+          <div
+            class="icon"
+            data-target="#github"
+          >
             <img
               src="./assets/imgs/github.png"
               alt="folder icon"
@@ -78,11 +96,48 @@
         class="window"
       >
         <div class="title-bar">
-          <button class="btn close-btn">x</button>
+          <button
+            class="btn close-btn"
+            data-target="#finder"
+          >
+            x
+          </button>
         </div>
-        <div class="content"></div>
+        <div class="content">
+          <div class="nav">
+            <ul>
+              <li>
+                <a href="">My Projects</a>
+                <ul>
+                  <li>Project 1</li>
+                  <li>Project 2</li>
+                  <li>Project 3</li>
+                  <li>Project 4</li>
+                </ul>
+              </li>
+              <li>
+                <a href="">Goals</a>
+                <ul>
+                  <li>Goal 1</li>
+                  <li>Goal 2</li>
+                  <li>Goal 3</li>
+                </ul>
+              </li>
+              <li><a href="">Skills</a></li>
+              <li><a href="">Images</a></li>
+              <li><a href="">Recycle Bin</a></li>
+            </ul>
+          </div>
+          <div class="main-content">
+            <div>test</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
-      <div
+      <!-- <div
         id="my-projects"
         class="window"
       >
@@ -90,7 +145,7 @@
           <button class="btn close-btn">x</button>
         </div>
         <div class="content"></div>
-      </div>
+      </div> -->
     </div>
     <div class="statusbar">
       <button class="btn start-btn">Start</button>
