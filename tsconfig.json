@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2020", // Use ES2020 features like BigInt, dynamic import, etc.
-    "module": "es2020", // Emit ES2020 module syntax (import/export)
+    "target": "es2020", // Use ES2020 features
+    "module": "es2020", // Emit ES2020 module syntax
     "strict": true, // Enable strict type checking
-    "outDir": "./dist", // Output directory for compiled files
-    "rootDir": "./src", // Source directory for TypeScript files
+    "rootDir": "./src", // Source directory for TS files
+    "outDir": "./dist", // Output directory for compiled JS files
     "moduleResolution": "node", // Resolve modules like Node.js
     "esModuleInterop": true, // Ensure compatibility with CommonJS
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file name case
     "skipLibCheck": true // Skip type checking of declaration files
   },
-  "include": ["src/**/*", "dist/main.js"],
+  "include": ["src/**/*"],
+
   "exclude": ["node_modules", "dist"]
 }
