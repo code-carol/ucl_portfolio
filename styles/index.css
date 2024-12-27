@@ -29,6 +29,11 @@ a {
   color: black;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .statusbar {
   bottom: 0;
   background-color: var(--purple);
@@ -110,7 +115,6 @@ a {
   height: 50vh;
   top: 15vh;
   left: 60vh;
-  display: none;
 }
 
 #my-projects {
