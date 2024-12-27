@@ -21,10 +21,10 @@
     <div class="homescreen">
       <div class="icons-rows">
         <div class="icons-container">
-          <a
-            href="#my-projects-finder"
+          <button
             class="icon"
-            data-target="#finder"
+            data-window="#finder"
+            data-content="#my-projects-finder"
           >
             <img
               src="./assets/imgs/this_computer.png"
@@ -32,80 +32,92 @@
               class="icon-img"
             />
             <h3>My Projects</h3>
-          </a>
-
-          <a
-            href="#goals-finder"
+          </button>
+          <button
             class="icon"
-            data-target="#finder"
+            data-window="#finder"
+            data-content="#goals-finder"
           >
             <img
               src="./assets/imgs/folder_closed.png"
-              alt="folder icon"
+              alt="folder close icon"
               class="icon-img"
             />
             <h3>Goals</h3>
-          </a>
-          <a
-            href="#skills-finder"
+          </button>
+          <button
             class="icon"
-            data-target="#finder"
+            data-window="#finder"
+            data-content="#skills-finder"
           >
             <img
               src="./assets/imgs/folder_closed.png"
-              alt="folder icon"
+              alt="folder close icon"
               class="icon-img"
             />
             <h3>Skills</h3>
-          </a>
-          <a
-            href="#bin-finder"
+          </button>
+          <button
             class="icon"
-            data-target="#finder"
+            data-window="#finder"
+            data-content="#bin-finder"
           >
             <img
               src="./assets/imgs/recycle_bin_full.png"
-              alt="folder icon"
+              alt="recycle bin icon"
               class="icon-img"
             />
             <h3>Recycle Bin</h3>
-          </a>
+          </button>
         </div>
         <div class="icons-container">
-          <a
-            href="#imgs-finder"
+          <button
             class="icon"
-            data-target="#finder"
+            data-window="#finder"
+            data-content="#imgs-finder"
           >
             <img
               src="./assets/imgs/image_editor.png"
-              alt="folder icon"
+              alt="image file icon"
               class="icon-img"
             />
             <h3>Images</h3>
-          </a>
-          <a
-            href="#github"
+          </button>
+          <button
             class="icon"
-            data-target="#github"
+            data-window="#finder"
+            data-content="#imgs-finder"
+          >
+            <img
+              src="./assets/imgs/image_editor.png"
+              alt="image file icon"
+              class="icon-img"
+            />
+            <h3>Images</h3>
+          </button>
+          <button
+            class="icon"
+            data-window="#github"
+            data-content="#github"
           >
             <img
               src="./assets/imgs/github.png"
-              alt="folder icon"
+              alt="github icon"
               class="icon-img"
             />
             <h3>Github</h3>
-          </a>
+          </button>
         </div>
       </div>
       <div
         id="finder"
         class="window"
+        hidden
       >
         <div class="title-bar">
           <button
             class="btn close-btn"
-            data-target="#finder"
+            data-window="#finder"
           >
             x
           </button>
