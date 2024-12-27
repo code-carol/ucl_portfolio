@@ -32,6 +32,7 @@ a {
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .statusbar {
@@ -72,7 +73,6 @@ button {
 .btn {
   color: var(--softWhite);
   background-color: var(--purple);
-  cursor: pointer;
   border: none;
   box-shadow: -1.5px -1.5px 0 white, /* Top and left */ 1.5px 1.5px 0 black; /* Bottom and right */
 }
@@ -103,7 +103,7 @@ button {
   margin-bottom: 0.8vh;
 }
 
-.window {
+.windows {
   position: absolute;
   border: 8px solid var(--purple);
   background-color: var(--softWhite);
@@ -114,10 +114,10 @@ button {
   width: 50vw;
   height: 50vh;
   top: 15vh;
-  left: 60vh;
+  left: 40vh;
 }
 
-#my-projects {
+#project-1 {
   width: 100vw;
   height: 80vh;
   top: 8vh;
@@ -145,15 +145,12 @@ ul {
   margin-right: 1vh;
 }
 
-.finder-links {
+.finder-btn {
   display: flex;
   align-items: center;
+  font-size: 1.5vh;
 }
 
 .finder-li {
   padding: 1.5vh;
-}
-
-.main-content > div {
-  display: none;
 }
