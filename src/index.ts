@@ -89,13 +89,11 @@ function closeWindow(el: HTMLElement): void {
 }
 
 // Add event listeners to open buttons
-const windowOpens = document.querySelectorAll(
-  ".icon"
-) as NodeListOf<HTMLElement>;
+const icons = document.querySelectorAll(".icon") as NodeListOf<HTMLElement>;
 
-windowOpens.forEach((openButton) => {
-  openButton.addEventListener("click", function () {
-    const targetSelector = openButton.getAttribute("data-target");
+icons.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    const targetSelector = icon.getAttribute("data-target");
     if (targetSelector) {
       const windowToOpen = document.querySelector(
         targetSelector
@@ -133,9 +131,3 @@ closeButtons.forEach((button) => {
     }
   });
 });
-
-// LINKS FUNCTIONALITY -------------------------------------------
-
-function showFolder(el: HTMLElement): void {
-  el.style.display = "block";
-}
