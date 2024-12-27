@@ -158,9 +158,9 @@ ul > li:hover > ul {
 }
 
 #my-projects-finder {
-  display: flex;
+  display: none;
 }
 
-.hide {
-  display: none;
+.flex {
+  display: flex;
 }
