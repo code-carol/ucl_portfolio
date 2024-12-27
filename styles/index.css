@@ -156,3 +156,11 @@ ul > li:hover > ul {
 .finder-li {
   padding: 1.5vh;
 }
+
+#my-projects-finder {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
