@@ -136,13 +136,6 @@ ul {
   padding: 0;
 }
 
-ul > li > ul {
-  display: none;
-}
-ul > li:hover > ul {
-  display: block;
-}
-
 .finder-img {
   width: 2vw;
   margin-right: 1vh;
@@ -157,10 +150,6 @@ ul > li:hover > ul {
   padding: 1.5vh;
 }
 
-#my-projects-finder {
+.main-content > div {
   display: none;
-}
-
-.flex {
-  display: flex;
 }
