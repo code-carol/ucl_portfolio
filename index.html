@@ -21,18 +21,21 @@
     <div class="homescreen">
       <div class="icons-rows">
         <div class="icons-container">
-          <div
+          <a
+            href="#my-projects-finder"
             class="icon"
             data-target="#finder"
           >
             <img
               src="./assets/imgs/this_computer.png"
-              alt="folder icon"
+              alt="computer icon"
               class="icon-img"
             />
             <h3>My Projects</h3>
-          </div>
-          <div
+          </a>
+
+          <a
+            href="#goals-finder"
             class="icon"
             data-target="#finder"
           >
@@ -42,8 +45,9 @@
               class="icon-img"
             />
             <h3>Goals</h3>
-          </div>
-          <div
+          </a>
+          <a
+            href="#skills-finder"
             class="icon"
             data-target="#finder"
           >
@@ -53,8 +57,9 @@
               class="icon-img"
             />
             <h3>Skills</h3>
-          </div>
-          <div
+          </a>
+          <a
+            href="#bin-finder"
             class="icon"
             data-target="#finder"
           >
@@ -64,10 +69,11 @@
               class="icon-img"
             />
             <h3>Recycle Bin</h3>
-          </div>
+          </a>
         </div>
         <div class="icons-container">
-          <div
+          <a
+            href="#imgs-finder"
             class="icon"
             data-target="#finder"
           >
@@ -77,8 +83,9 @@
               class="icon-img"
             />
             <h3>Images</h3>
-          </div>
-          <div
+          </a>
+          <a
+            href="#github"
             class="icon"
             data-target="#github"
           >
@@ -88,7 +95,7 @@
               class="icon-img"
             />
             <h3>Github</h3>
-          </div>
+          </a>
         </div>
       </div>
       <div
@@ -106,30 +113,86 @@
         <div class="content">
           <div class="nav">
             <ul>
-              <li>
-                <a href="">My Projects</a>
+              <li class="finder-li">
+                <a
+                  href="#my-projects-finder"
+                  class="finder-links"
+                >
+                  <img
+                    src="./assets/imgs/this_computer.png"
+                    alt="computer icon"
+                    class="finder-img"
+                  />
+
+                  My Projects
+                </a>
                 <ul>
-                  <li>Project 1</li>
-                  <li>Project 2</li>
-                  <li>Project 3</li>
-                  <li>Project 4</li>
+                  <li><a href="#project-1">Project 1</a></li>
+                  <li><a href="#project-2">Project 2</a></li>
+                  <li><a href="#project-3">Project 3</a></li>
+                  <li><a href="#project-4">Project 4</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="">Goals</a>
+              <li class="finder-li">
+                <a
+                  href="#goals-finder"
+                  class="finder-links"
+                >
+                  <img
+                    src="./assets/imgs/folder_closed.png"
+                    alt="folder icon"
+                    class="finder-img"
+                  />
+                  Goals</a
+                >
                 <ul>
-                  <li>Goal 1</li>
-                  <li>Goal 2</li>
-                  <li>Goal 3</li>
+                  <li><a href="#goal-1">Goal 1</a></li>
+                  <li><a href="#goal-2">Goal 2</a></li>
+                  <li><a href="#goal-3">Goal 3</a></li>
                 </ul>
               </li>
-              <li><a href="">Skills</a></li>
-              <li><a href="">Images</a></li>
-              <li><a href="">Recycle Bin</a></li>
+              <li class="finder-li">
+                <a
+                  href="#skills-finder"
+                  class="finder-links"
+                >
+                  <img
+                    src="./assets/imgs/folder_closed.png"
+                    alt="folder icon"
+                    class="finder-img"
+                  />
+                  Skills</a
+                >
+              </li>
+              <li class="finder-li">
+                <a
+                  href="#imgs-finder"
+                  class="finder-links"
+                >
+                  <img
+                    src="./assets/imgs/image_editor.png"
+                    alt="folder icon"
+                    class="finder-img"
+                  />
+                  Images</a
+                >
+              </li>
+              <li class="finder-li">
+                <a
+                  href="#bin-finder"
+                  class="finder-links"
+                >
+                  <img
+                    src="./assets/imgs/recycle_bin.png"
+                    alt="folder icon"
+                    class="finder-img"
+                  />Recycle Bin</a
+                >
+              </li>
             </ul>
           </div>
           <div class="main-content">
-            <div>test</div>
+            <div id="my-projects-finder"></div>
             <div></div>
             <div></div>
             <div></div>
