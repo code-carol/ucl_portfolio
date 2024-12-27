@@ -1,10 +1,10 @@
-// Make all elements with the class "draggable" draggable:
+// WINDOW DRAG FUNCTIONALITY -------------------------------------------
+
+// Make all windows draggable:
 document.querySelectorAll(".window").forEach((el) => {
   dragElement(el as HTMLElement);
   addWindowTapHandling(el as HTMLElement);
 });
-
-// Drag functionality
 
 function dragElement(el: HTMLElement) {
   let initialX = 0,
@@ -50,7 +50,7 @@ function dragElement(el: HTMLElement) {
   }
 }
 
-// Moveable window functionality
+// WINDOW MOVE FUNCTIONALITY -------------------------------------------
 
 let biggestIndex: number = 0; // Initialize biggestIndex
 let selectedIcon: HTMLElement | null = null; // Keep track of the selected icon
@@ -78,7 +78,7 @@ function deselectIcon(el: HTMLElement | null): void {
   }
 }
 
-// Open and close window functionality
+// WINDOW OPEN/CLOSE FUNCTIONALITY -------------------------------------------
 
 function openWindow(el: HTMLElement): void {
   el.style.display = "block";
@@ -133,3 +133,9 @@ closeButtons.forEach((button) => {
     }
   });
 });
+
+// LINKS FUNCTIONALITY -------------------------------------------
+
+function showFolder(el: HTMLElement): void {
+  el.style.display = "block";
+}
