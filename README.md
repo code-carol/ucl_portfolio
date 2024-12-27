@@ -6,3 +6,5 @@ to-do
 - organise TS file
 - make better comments
 - give better names to variables/functions
+
+the void type represents the absence of a return value from a function
