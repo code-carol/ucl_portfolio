@@ -24,6 +24,11 @@ body {
   background-size: cover;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .statusbar {
   bottom: 0;
   background-color: var(--purple);
@@ -122,6 +127,32 @@ body {
 }
 
 .nav {
-  border: 1px solid red;
+  border-right: 8px solid var(--purple);
   height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul > li > ul {
+  display: none;
+}
+ul > li:hover > ul {
+  display: block;
+}
+
+.finder-img {
+  width: 2vw;
+  margin-right: 1vh;
+}
+
+.finder-links {
+  display: flex;
+  align-items: center;
+}
+
+.finder-li {
+  padding: 1.5vh;
 }
