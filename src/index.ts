@@ -1,10 +1,80 @@
-// WINDOW DRAG FUNCTIONALITY -------------------------------------------
-
-// Make all windows draggable:
 document.querySelectorAll(".window").forEach((el) => {
   dragElement(el as HTMLElement);
   addWindowTapHandling(el as HTMLElement);
 });
+
+const windowOpens = document.querySelectorAll(
+  ".icon"
+) as NodeListOf<HTMLElement>;
+
+windowOpens.forEach((openButton) => {
+  openButton.addEventListener("click", function () {
+    const targetSelector = openButton.getAttribute("data-target");
+    const contentTarget = openButton.getAttribute("href");
+
+    if (targetSelector && contentTarget) {
+      const windowToOpen = document.querySelector(
+        targetSelector
+      ) as HTMLElement;
+
+      const contentToOpen = document.querySelector(
+        contentTarget
+      ) as HTMLElement;
+
+      if (windowToOpen) {
+        openWindow(windowToOpen); // Open the specific window
+        showContent(contentToOpen);
+      } else {
+        console.error(`Element with selector "${targetSelector}" not found.`);
+      }
+    } else {
+      console.error("No target specified in data-target attribute.");
+    }
+  });
+});
+
+const test = document.querySelectorAll(
+  ".finder-links"
+) as NodeListOf<HTMLElement>;
+
+test.forEach((t) => {
+  t.addEventListener("click", function () {
+    const contentTarget = t.getAttribute("href");
+    if (contentTarget) {
+      const contentToOpen = document.querySelector(
+        contentTarget
+      ) as HTMLElement;
+      // Open the specific window
+      showContent(contentToOpen);
+    }
+  });
+});
+
+// Add event listeners to close buttons
+
+const closeButtons = document.querySelectorAll(
+  ".close-btn"
+) as NodeListOf<HTMLElement>;
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const targetSelector = button.getAttribute("data-target");
+    if (targetSelector) {
+      const windowToClose = document.querySelector(
+        targetSelector
+      ) as HTMLElement;
+      if (windowToClose) {
+        closeWindow(windowToClose); // Close the specific window
+      } else {
+        console.error(`Element with selector "${targetSelector}" not found.`);
+      }
+    } else {
+      console.error("No target specified in data-target attribute.");
+    }
+  });
+});
+
+// WINDOW DRAG FUNCTIONALITY -------------------------------------------
 
 function dragElement(el: HTMLElement) {
   let initialX = 0,
@@ -13,6 +83,7 @@ function dragElement(el: HTMLElement) {
     currentY = 0;
 
   const titleBar = el.querySelector(".title-bar");
+
   if (titleBar) {
     // If present, the tile bar is where you move the DIV from:
     (titleBar as HTMLElement).onmousedown = dragMouseDown;
@@ -88,46 +159,17 @@ function closeWindow(el: HTMLElement): void {
   el.style.display = "none";
 }
 
-// Add event listeners to open buttons
-const icons = document.querySelectorAll(".icon") as NodeListOf<HTMLElement>;
+// SHOW EACH ICON CONTENT FUNCTIONALITY
 
-icons.forEach((icon) => {
-  icon.addEventListener("click", function () {
-    const targetSelector = icon.getAttribute("data-target");
-    if (targetSelector) {
-      const windowToOpen = document.querySelector(
-        targetSelector
-      ) as HTMLElement;
-      if (windowToOpen) {
-        openWindow(windowToOpen); // Open the specific window
-      } else {
-        console.error(`Element with selector "${targetSelector}" not found.`);
-      }
-    } else {
-      console.error("No target specified in data-target attribute.");
-    }
+function showContent(el: HTMLElement): void {
+  // Hide all content divs in main-content
+  const allContent = document.querySelectorAll(".main-content > div");
+  allContent.forEach((content) => {
+    (content as HTMLElement).style.display = "none";
   });
-});
 
-// Add event listeners to close buttons
-const closeButtons = document.querySelectorAll(
-  ".close-btn"
-) as NodeListOf<HTMLElement>;
-
-closeButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const targetSelector = button.getAttribute("data-target");
-    if (targetSelector) {
-      const windowToClose = document.querySelector(
-        targetSelector
-      ) as HTMLElement;
-      if (windowToClose) {
-        closeWindow(windowToClose); // Close the specific window
-      } else {
-        console.error(`Element with selector "${targetSelector}" not found.`);
-      }
-    } else {
-      console.error("No target specified in data-target attribute.");
-    }
-  });
-});
+  // Show target content
+  if (el) {
+    (el as HTMLElement).style.display = "flex"; // Use flex since you're using .flex class
+  }
+}
