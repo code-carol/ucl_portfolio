@@ -4,7 +4,7 @@ const allNavBtn = document.querySelectorAll(".finder-btn");
 const allCloseBtn = document.querySelectorAll(".close-btn");
 const startBtn = document.querySelector(".start-btn");
 
-let maxWindowIndex: number = 0;
+let maxWindowZIndex: number = 0;
 
 allWindows.forEach((w) => {
   dragWindow(w as HTMLElement);
@@ -79,8 +79,8 @@ document.addEventListener("click", function (event) {
 
 function openWindow(el: HTMLElement): void {
   el.hidden = false;
-  maxWindowIndex++;
-  el.style.zIndex = maxWindowIndex.toString();
+  maxWindowZIndex++;
+  el.style.zIndex = maxWindowZIndex.toString();
 }
 
 function closeWindow(el: HTMLElement): void {
@@ -154,8 +154,8 @@ function moveWindow(el: HTMLElement): void {
 }
 
 function handleWindowTap(el: HTMLElement): void {
-  maxWindowIndex++;
-  el.style.zIndex = maxWindowIndex.toString();
+  maxWindowZIndex++;
+  el.style.zIndex = maxWindowZIndex.toString();
 }
 
 // MENU BAR TOGGLE FUNCTIONALITY -------------------------------------------
