@@ -1,6 +1,6 @@
 # 💻 webOS
 
-### Simple way to showcase my first year UCL projects
+### Simple way to showcase my first year university projects
 
 ## 🎨 Design
 
