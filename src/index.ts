@@ -147,7 +147,7 @@ function dragWindow(el: HTMLElement) {
   }
 }
 
-// WINDOWs MOVE UPFRONT FUNCTIONALITY -------------------------------------------
+// WINDOWS MOVE UPFRONT FUNCTIONALITY -------------------------------------------
 
 function moveWindow(el: HTMLElement): void {
   el.addEventListener("mousedown", () => handleWindowTap(el));
