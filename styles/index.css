@@ -3,6 +3,7 @@
 :root {
   --softWhite: aliceblue;
   --purple: #433878;
+  --Lightpurple: #6152ab;
   --purpleHover: #43387877;
 }
 
@@ -50,8 +51,8 @@ button {
 }
 
 .menu {
-  background-color: var(--softWhite);
-  width: 45vh;
+  background-color: var(--Lightpurple);
+  width: 50vh;
   height: 70vh;
   position: relative;
 }
@@ -131,10 +132,10 @@ button {
 }
 
 #project-1 {
-  width: 100vw;
+  width: 50vw;
   height: 80vh;
-  top: 8vh;
-  left: 60vh;
+  top: 6vh;
+  left: 70vh;
 }
 
 .content {
