@@ -1,6 +1,6 @@
-# 💻 webOS
+# 💻 Simple webOS
 
-### Simple way to showcase my first year university projects
+### To showcase my first year university projects
 
 ## 🎨 Design
 
