@@ -2,6 +2,7 @@ const allWindows = document.querySelectorAll(".windows");
 const allIcons = document.querySelectorAll(".icon");
 const allNavBtn = document.querySelectorAll(".finder-btn");
 const allCloseBtn = document.querySelectorAll(".close-btn");
+const startBtn = document.querySelector(".start-btn");
 
 let maxWindowIndex: number = 0;
 
@@ -49,6 +50,29 @@ allCloseBtn.forEach((btn) => {
       console.error(`Element with selector "${window}" not found.`);
     }
   });
+});
+
+startBtn?.addEventListener("click", function () {
+  const menuBar = document.querySelector(".menu") as HTMLElement;
+  const menuDiv = document.querySelector(".menu-container") as HTMLElement;
+  if (menuBar && menuDiv) {
+    toggleMenu(menuBar);
+    handleWindowTap(menuDiv);
+  }
+});
+
+document.addEventListener("click", function (event) {
+  const menuBar = document.querySelector(".menu-bar") as HTMLElement;
+  const menu = document.querySelector(".menu") as HTMLElement;
+
+  if (menu && !menu.hidden) {
+    if (
+      !menu.contains(event.target as Node) &&
+      !menuBar.contains(event.target as Node)
+    ) {
+      menu.hidden = true;
+    }
+  }
 });
 
 // WINDOWS OPEN/CLOSE FUNCTIONALITY -------------------------------------------
@@ -132,4 +156,10 @@ function moveWindow(el: HTMLElement): void {
 function handleWindowTap(el: HTMLElement): void {
   maxWindowIndex++;
   el.style.zIndex = maxWindowIndex.toString();
+}
+
+// MENU BAR TOGGLE FUNCTIONALITY -------------------------------------------
+
+function toggleMenu(el: HTMLElement): void {
+  el.hidden = !el.hidden;
 }

@@ -35,12 +35,25 @@ button {
   cursor: pointer;
 }
 
-.statusbar {
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   bottom: 0;
+  width: 100%;
+}
+
+.menu-bar {
   background-color: var(--purple);
   padding: 1.5vh;
   width: 100%;
-  position: fixed;
+}
+
+.menu {
+  background-color: var(--softWhite);
+  width: 45vh;
+  height: 70vh;
+  position: relative;
 }
 
 .icons-rows {
