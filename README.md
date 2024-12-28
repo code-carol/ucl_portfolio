@@ -2,9 +2,8 @@
 
 to-do
 
+- Start writing a proper readme
 - Write section about creating ts files again = lessons learned
-- organise TS file
-- make better comments
-- give better names to variables/functions
+- Style menu
 
 the void type represents the absence of a return value from a function
