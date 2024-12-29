@@ -3,6 +3,10 @@ const allIcons = document.querySelectorAll(".icon");
 const allNavBtn = document.querySelectorAll(".finder-btn");
 const allCloseBtn = document.querySelectorAll(".close-btn");
 const startBtn = document.querySelector(".start-btn");
+const titleImg = document.getElementById("show-title-img") as HTMLImageElement;
+const titleHeading = document.getElementById(
+  "show-title-heading"
+) as HTMLElement;
 
 let maxWindowZIndex: number = 0;
 
@@ -15,6 +19,8 @@ allIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     const window = icon.getAttribute("data-window");
     const content = icon.getAttribute("data-content");
+    const imgElement = icon.querySelector<HTMLImageElement>("img");
+    const headingElement = icon.querySelector<HTMLElement>("h3");
 
     if (window) {
       const windowToOpen = document.querySelector(window) as HTMLElement;
@@ -23,6 +29,12 @@ allIcons.forEach((icon) => {
       if (content) {
         const contentToShow = document.querySelector(content) as HTMLElement;
         showContent(contentToShow);
+      }
+
+      if (imgElement && headingElement) {
+        const imgSrc = imgElement.src;
+        const headingText = headingElement.textContent || "";
+        updateTitle(imgSrc, headingText);
       }
     } else {
       console.error(`Window element not found: ${window}`);
@@ -162,4 +174,11 @@ function handleWindowTap(el: HTMLElement): void {
 
 function toggleMenu(el: HTMLElement): void {
   el.hidden = !el.hidden;
+}
+
+// SHOW TITLE FUNCTIONALITY -------------------------------------------
+
+function updateTitle(imgSrc: string, headingText: string): void {
+  titleImg.src = imgSrc;
+  titleHeading.textContent = headingText;
 }

@@ -111,13 +111,20 @@ button {
   align-items: center;
 }
 
+.title-show {
+  display: none;
+}
+
 .title-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-bottom: 1vh;
 }
 
 .title-img {
-  width: 2vh;
+  width: 3vh;
+  margin-right: 0.5vh;
 }
 
 .title-heading {
@@ -142,7 +149,7 @@ button {
   width: 40vw;
   height: 50vh;
   top: 15vh;
-  left: 40vh;
+  left: 60vh;
 }
 
 #project-1 {
