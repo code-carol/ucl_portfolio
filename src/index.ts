@@ -179,12 +179,14 @@ function toggleMenu(el: HTMLElement): void {
   el.hidden = !el.hidden;
 }
 
-// SHOW TITLE FUNCTIONALITY -------------------------------------------
+// UPDATE TITLE FUNCTIONALITY -------------------------------------------
 
 function updateTitle(imgSrc: string, headingText: string): void {
   titleImg.src = imgSrc;
   titleHeading.textContent = headingText;
 }
+
+// SHOW/HIDE TAB FUNCTIONALITY -------------------------------------------
 
 function showTab(imgSrc: string, headingText: string): void {
   if (tabDiv) {
