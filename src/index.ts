@@ -3,10 +3,11 @@ const allIcons = document.querySelectorAll(".icon");
 const allNavBtn = document.querySelectorAll(".finder-btn");
 const allCloseBtn = document.querySelectorAll(".close-btn");
 const startBtn = document.querySelector(".start-btn");
-const titleImg = document.getElementById("show-title-img") as HTMLImageElement;
-const titleHeading = document.getElementById(
-  "show-title-heading"
-) as HTMLElement;
+const titleImg = document.querySelector(".title-img") as HTMLImageElement;
+const titleHeading = document.querySelector(".title-heading") as HTMLElement;
+const tabImg = document.querySelector(".tab-img") as HTMLImageElement;
+const tabHeading = document.querySelector(".tab-heading") as HTMLElement;
+const tabDiv = document.querySelector(".tab-container");
 
 let maxWindowZIndex: number = 0;
 
@@ -30,6 +31,7 @@ allIcons.forEach((icon) => {
         const imgSrc = imgElement.src;
         const headingText = headingElement.textContent || "";
         updateTitle(imgSrc, headingText);
+        showTab(imgSrc, headingText);
       }
 
       if (content) {
@@ -58,6 +60,7 @@ allCloseBtn.forEach((btn) => {
     if (window) {
       const windowToClose = document.querySelector(window) as HTMLElement;
       closeWindow(windowToClose);
+      hideTab();
     } else {
       console.error(`Element with selector "${window}" not found.`);
     }
@@ -108,7 +111,7 @@ function showContent(el: HTMLElement): void {
   });
 
   if (el) {
-    (el as HTMLElement).style.display = "flex"; // Use flex since you're using .flex class
+    (el as HTMLElement).style.display = "flex";
   }
 }
 
@@ -181,4 +184,19 @@ function toggleMenu(el: HTMLElement): void {
 function updateTitle(imgSrc: string, headingText: string): void {
   titleImg.src = imgSrc;
   titleHeading.textContent = headingText;
+}
+
+function showTab(imgSrc: string, headingText: string): void {
+  if (tabDiv) {
+    (tabDiv as HTMLElement).style.display = "flex";
+  }
+
+  tabImg.src = imgSrc;
+  tabHeading.textContent = headingText;
+}
+
+function hideTab() {
+  if (tabDiv) {
+    (tabDiv as HTMLElement).style.display = "none";
+  }
 }

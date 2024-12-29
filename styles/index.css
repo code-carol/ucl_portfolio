@@ -3,7 +3,7 @@
 :root {
   --softWhite: aliceblue;
   --purple: #433878;
-  --Lightpurple: #6152ab;
+  --LightPurple: #6152ab;
   --purpleHover: #43387877;
 }
 
@@ -36,6 +36,13 @@ button {
   cursor: pointer;
 }
 
+.btn {
+  color: var(--softWhite);
+  background-color: var(--purple);
+  border: none;
+  box-shadow: -1.5px -1.5px 0 white, /* Top and left */ 1.5px 1.5px 0 black; /* Bottom and right */
+}
+
 .menu-container {
   display: flex;
   flex-direction: column;
@@ -48,14 +55,23 @@ button {
   background-color: var(--purple);
   padding: 1.5vh;
   width: 100%;
+  display: flex;
 }
 
 .menu {
-  background-color: var(--Lightpurple);
+  background-color: var(--LightPurple);
   width: 60vh;
   height: 70vh;
   position: relative;
   border-top-right-radius: 0.5vh;
+}
+
+.start-btn {
+  margin-right: 3vh;
+  width: 10vh;
+  height: 5vh;
+  font-size: 2.5vh;
+  letter-spacing: 2px;
 }
 
 .icons-rows {
@@ -85,22 +101,8 @@ button {
   margin-bottom: 1vh;
 }
 
-.btn {
-  color: var(--softWhite);
-  background-color: var(--purple);
-  border: none;
-  box-shadow: -1.5px -1.5px 0 white, /* Top and left */ 1.5px 1.5px 0 black; /* Bottom and right */
-}
-
 .btn:active {
   box-shadow: -1.5px -1.5px 0 black, /* Top and left */ 1.5px 1.5px 0 white; /* Bottom and right */
-}
-
-.start-btn {
-  margin: 0vh 1vh;
-  padding: 0.5vh 2vh;
-  font-size: 2.5vh;
-  letter-spacing: 2px;
 }
 
 .title-bar {
@@ -122,12 +124,36 @@ button {
   margin-bottom: 1vh;
 }
 
-.title-img {
-  width: 3vh;
-  margin-right: 0.5vh;
+.tab-container {
+  display: none;
 }
 
-.title-heading {
+.tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 25vh;
+  height: 5vh;
+  box-shadow: -1.5px -1.5px 0 white, /* Top and left */ 1.5px 1.5px 0 black; /* Bottom and right */
+}
+
+.tab:active {
+  box-shadow: -1.5px -1.5px 0 black, /* Top and left */ 1.5px 1.5px 0 white; /* Bottom and right */
+}
+
+.title-img,
+.tab-img {
+  width: 3vh;
+  margin-right: 1vh;
+}
+
+.tab-img {
+  margin-left: 1vh;
+}
+
+.title-heading,
+.tab-heading {
   color: var(--softWhite);
 }
 
