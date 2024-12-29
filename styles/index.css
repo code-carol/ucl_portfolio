@@ -52,9 +52,10 @@ button {
 
 .menu {
   background-color: var(--Lightpurple);
-  width: 50vh;
+  width: 60vh;
   height: 70vh;
   position: relative;
+  border-top-right-radius: 0.5vh;
 }
 
 .icons-rows {
@@ -125,7 +126,7 @@ button {
 }
 
 #finder {
-  width: 50vw;
+  width: 40vw;
   height: 50vh;
   top: 15vh;
   left: 40vh;
