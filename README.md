@@ -26,7 +26,7 @@
 
 to-do
 
-- Start writing a proper readme
+- Create toggle for tabs
 - Write section about creating ts files again = lessons learned
 - Style menu
 - Add real time date menu-bar
