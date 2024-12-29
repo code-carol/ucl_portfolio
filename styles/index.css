@@ -34,6 +34,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  font-family: Play;
 }
 
 .btn {
@@ -155,6 +156,10 @@ button {
 .title-heading,
 .tab-heading {
   color: var(--softWhite);
+}
+
+.tab-heading {
+  font-size: 2vh;
 }
 
 .close-btn {
