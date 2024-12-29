@@ -105,10 +105,23 @@ button {
 
 .title-bar {
   background-color: var(--purple);
-  display: flex;
-  justify-content: end;
-  align-items: end;
   height: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-img {
+  width: 2vh;
+}
+
+.title-heading {
+  color: var(--softWhite);
 }
 
 .close-btn {
