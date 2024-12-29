@@ -30,3 +30,11 @@ to-do
 - Write section about creating ts files again = lessons learned
 - Style menu
 - Add real time date menu-bar
+
+things that i want to add
+
+- calculator
+- paint
+- notepad
+- one game
+- chatbot
