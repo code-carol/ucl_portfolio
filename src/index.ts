@@ -26,15 +26,15 @@ allIcons.forEach((icon) => {
       const windowToOpen = document.querySelector(window) as HTMLElement;
       openWindow(windowToOpen);
 
-      if (content) {
-        const contentToShow = document.querySelector(content) as HTMLElement;
-        showContent(contentToShow);
-      }
-
-      if (imgElement && headingElement) {
+      if (window === "#finder" && imgElement && headingElement) {
         const imgSrc = imgElement.src;
         const headingText = headingElement.textContent || "";
         updateTitle(imgSrc, headingText);
+      }
+
+      if (content) {
+        const contentToShow = document.querySelector(content) as HTMLElement;
+        showContent(contentToShow);
       }
     } else {
       console.error(`Window element not found: ${window}`);
