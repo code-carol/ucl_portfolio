@@ -30,6 +30,7 @@ to-do
 - Write section about creating ts files again = lessons learned
 - Style menu
 - Add real time date menu-bar
+- Fix tab opening issue
 
 things that i want to add
 
