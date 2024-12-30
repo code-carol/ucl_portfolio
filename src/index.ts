@@ -7,7 +7,7 @@ const titleImg = document.querySelector(".title-img") as HTMLImageElement;
 const titleHeading = document.querySelector(".title-heading") as HTMLElement;
 const tabImg = document.querySelector(".tab-img") as HTMLImageElement;
 const tabHeading = document.querySelector(".tab-heading") as HTMLElement;
-const tabDiv = document.querySelector(".tab-container");
+const tabDiv = document.querySelector(".tab-container") as HTMLElement;
 
 let maxWindowZIndex: number = 0;
 
@@ -59,8 +59,11 @@ allCloseBtn.forEach((btn) => {
     const window = btn.getAttribute("data-window");
     if (window) {
       const windowToClose = document.querySelector(window) as HTMLElement;
+      const tabToClose = document.querySelector(
+        `.tab-container [data-window="${window}"]`
+      ) as HTMLElement;
       closeWindow(windowToClose);
-      hideTab();
+      hideTab(tabToClose);
     } else {
       console.error(`Element with selector "${window}" not found.`);
     }
@@ -189,16 +192,13 @@ function updateTitle(imgSrc: string, headingText: string): void {
 // SHOW/HIDE TAB FUNCTIONALITY -------------------------------------------
 
 function showTab(imgSrc: string, headingText: string): void {
-  if (tabDiv) {
-    (tabDiv as HTMLElement).style.display = "flex";
-  }
-
+  tabDiv.style.display = "flex";
   tabImg.src = imgSrc;
   tabHeading.textContent = headingText;
 }
 
-function hideTab() {
-  if (tabDiv) {
-    (tabDiv as HTMLElement).style.display = "none";
+function hideTab(el: HTMLElement): void {
+  if (el) {
+    el.style.display = "none";
   }
 }
