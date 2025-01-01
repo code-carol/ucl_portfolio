@@ -31,6 +31,7 @@ to-do
 - Style menu
 - Add real time date menu-bar
 - Fix tab opening issue
+- Make tabs open dynamically based on the window
 
 things that i want to add
 
