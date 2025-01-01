@@ -32,6 +32,7 @@ to-do
 - Add real time date menu-bar
 - Fix tab opening issue
 - Make tabs open dynamically based on the window
+- Add first project like a newspaper article
 
 things that i want to add
 
