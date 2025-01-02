@@ -1,6 +1,6 @@
-# 💻 Simple webOS
+# 💻 EFY webOS
 
-### To showcase my first year university projects
+### Simple webOS to showcase my first year university projects
 
 ## 🎨 Design
 
