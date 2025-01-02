@@ -1,4 +1,4 @@
-# 💻 Engineering Foundation Year webOS
+# 💻 Engineering Foundation Year Portfolio
 
 ### Simple webOS to showcase my first year university projects
 
