@@ -1,4 +1,4 @@
-# 💻 EFY webOS
+# 💻 Engineering Foundation Year webOS
 
 ### Simple webOS to showcase my first year university projects
 
