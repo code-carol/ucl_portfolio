@@ -26,12 +26,12 @@
 
 to-do
 
-- Create toggle for tabs
+- Recreate toggle for tabs - try different approach for the tabs
+- Make tabs open dynamically based on the window
 - Write section about creating ts files again = lessons learned
 - Style menu
 - Add real time date menu-bar
 - Fix tab opening issue
-- Make tabs open dynamically based on the window
 - Add first project like a newspaper article
 
 things that i want to add
