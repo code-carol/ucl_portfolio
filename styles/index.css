@@ -53,10 +53,12 @@ button {
 }
 
 .menu-bar {
-  background-color: var(--purple);
   padding: 1.5vh;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--purple);
 }
 
 .menu {
@@ -67,12 +69,22 @@ button {
   border-top-right-radius: 0.5vh;
 }
 
+.menu-tabs {
+  display: flex;
+  flex-direction: row;
+}
+
 .start-btn {
-  margin-right: 3vh;
+  margin-right: 4vh;
   width: 10vh;
   height: 5vh;
   font-size: 2.5vh;
   letter-spacing: 2px;
+}
+
+.time {
+  color: var(--softWhite);
+  margin-right: 4vh;
 }
 
 .icons-rows {
