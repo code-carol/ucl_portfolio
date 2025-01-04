@@ -87,14 +87,17 @@ button {
   margin-right: 4vh;
 }
 
+.icons-container {
+  margin: 0 1vh;
+}
+
 .icons-rows {
+  margin: 4vh 1vh;
   display: flex;
   flex-direction: row;
-  margin-top: 3vh;
 }
 
 .icon {
-  margin: 1vh 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
