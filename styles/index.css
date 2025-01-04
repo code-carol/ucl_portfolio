@@ -41,7 +41,8 @@ button {
   color: var(--softWhite);
   background-color: var(--purple);
   border: none;
-  box-shadow: -1.5px -1.5px 0 white, /* Top and left */ 1.5px 1.5px 0 black; /* Bottom and right */
+  box-shadow: -0.09rem -0.09rem 0 white,
+    /* Top and left */ 0.09rem 0.09rem 0 black; /* Bottom and right */
 }
 
 .menu-container {
@@ -53,7 +54,7 @@ button {
 }
 
 .menu-bar {
-  padding: 1.5vh;
+  padding: 0.6rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -63,10 +64,10 @@ button {
 
 .menu {
   background-color: var(--LightPurple);
-  width: 60vh;
-  height: 70vh;
+  width: 25rem;
+  height: 30rem;
   position: relative;
-  border-top-right-radius: 0.5vh;
+  border-top-right-radius: 0.5rem;
 }
 
 .menu-tabs {
@@ -75,24 +76,23 @@ button {
 }
 
 .start-btn {
-  margin-right: 4vh;
-  width: 10vh;
-  height: 5vh;
-  font-size: 2.5vh;
-  letter-spacing: 2px;
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
 }
 
 .time {
   color: var(--softWhite);
-  margin-right: 4vh;
+  margin-right: 2rem;
 }
 
 .icons-container {
-  margin: 0 1vh;
+  margin: 0 0.5rem;
 }
 
 .icons-rows {
-  margin: 4vh 1vh;
+  margin: 2rem 0.3rem;
   display: flex;
   flex-direction: row;
 }
