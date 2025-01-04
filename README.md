@@ -33,6 +33,7 @@ to-do
 - Add real time date menu-bar
 - Fix tab opening issue
 - Add first project like a newspaper article
+- Change folder icons to open folders when clicked
 
 things that i want to add
 
