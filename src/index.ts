@@ -10,7 +10,6 @@ allWindows.forEach((w) => {
 // ICONS -------------------------------------------
 
 const allIcons = document.querySelectorAll(".icon");
-const iconImg = document.querySelector(".icon-img");
 
 allIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
@@ -18,9 +17,6 @@ allIcons.forEach((icon) => {
     const content = icon.getAttribute("data-content");
     const imgElement = icon.querySelector<HTMLImageElement>("img");
     const headingElement = icon.querySelector<HTMLElement>("h3");
-
-    if (content === "#goals" || content === "#skills") {
-    }
 
     if (window) {
       const windowToOpen = document.querySelector(window) as HTMLElement;
