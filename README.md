@@ -30,8 +30,6 @@ to-do
 - Make tabs open dynamically based on the window
 - Write section about creating ts files again = lessons learned
 - Style menu
-- Add real time date menu-bar
-- Fix tab opening issue
 - Add first project like a newspaper article
 - Change folder icons to open folders when clicked
 
