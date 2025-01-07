@@ -1,20 +1,16 @@
-const allWindows = document.querySelectorAll(".windows");
-const allIcons = document.querySelectorAll(".icon");
-const allNavBtn = document.querySelectorAll(".finder-btn");
-const allCloseBtn = document.querySelectorAll(".close-btn");
-const startBtn = document.querySelector(".start-btn");
-const titleImg = document.querySelector(".title-img") as HTMLImageElement;
-const titleHeading = document.querySelector(".title-heading") as HTMLElement;
-const tabImg = document.querySelector(".tab-img") as HTMLImageElement;
-const tabHeading = document.querySelector(".tab-heading") as HTMLElement;
-const tabDiv = document.querySelector(".tab-container") as HTMLElement;
+// WINDOWS -------------------------------------------
 
-let maxWindowZIndex: number = 0;
+const allWindows = document.querySelectorAll(".windows");
 
 allWindows.forEach((w) => {
   dragWindow(w as HTMLElement);
   moveWindow(w as HTMLElement);
 });
+
+// ICONS -------------------------------------------
+
+const allIcons = document.querySelectorAll(".icon");
+const iconImg = document.querySelector(".icon-img");
 
 allIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
@@ -22,6 +18,9 @@ allIcons.forEach((icon) => {
     const content = icon.getAttribute("data-content");
     const imgElement = icon.querySelector<HTMLImageElement>("img");
     const headingElement = icon.querySelector<HTMLElement>("h3");
+
+    if (content === "#goals" || content === "#skills") {
+    }
 
     if (window) {
       const windowToOpen = document.querySelector(window) as HTMLElement;
@@ -44,15 +43,9 @@ allIcons.forEach((icon) => {
   });
 });
 
-allNavBtn.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const content = btn.getAttribute("data-content");
-    if (content) {
-      const contentToShow = document.querySelector(content) as HTMLElement;
-      showContent(contentToShow);
-    }
-  });
-});
+// CLOSE BUTTONS  -------------------------------------------
+
+const allCloseBtn = document.querySelectorAll(".close-btn");
 
 allCloseBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
@@ -69,6 +62,10 @@ allCloseBtn.forEach((btn) => {
     }
   });
 });
+
+// START BUTTON  -------------------------------------------
+
+const startBtn = document.querySelector(".start-btn");
 
 startBtn?.addEventListener("click", function () {
   const menuBar = document.querySelector(".menu") as HTMLElement;
@@ -200,6 +197,8 @@ function dragWindow(el: HTMLElement) {
 
 // WINDOWS MOVE UPFRONT FUNCTIONALITY -------------------------------------------
 
+let maxWindowZIndex: number = 0;
+
 function moveWindow(el: HTMLElement): void {
   el.addEventListener("mousedown", () => handleWindowTap(el));
 }
@@ -217,12 +216,19 @@ function toggleMenu(el: HTMLElement): void {
 
 // UPDATE TITLE FUNCTIONALITY -------------------------------------------
 
+const titleImg = document.querySelector(".title-img") as HTMLImageElement;
+const titleHeading = document.querySelector(".title-heading") as HTMLElement;
+
 function updateTitle(imgSrc: string, headingText: string): void {
   titleImg.src = imgSrc;
   titleHeading.textContent = headingText;
 }
 
 // SHOW/HIDE TAB FUNCTIONALITY -------------------------------------------
+
+const tabImg = document.querySelector(".tab-img") as HTMLImageElement;
+const tabHeading = document.querySelector(".tab-heading") as HTMLElement;
+const tabDiv = document.querySelector(".tab-container") as HTMLElement;
 
 function showTab(imgSrc: string, headingText: string): void {
   tabDiv.style.display = "flex";
