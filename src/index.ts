@@ -93,6 +93,39 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// FORMAT DATE AND TIME TO DD/MM/YYYY HH:MM -------------------------------------------
+
+function dateFormat(date: Date): string {
+  const dateFormatter = new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+
+  const timeFormatter = new Intl.DateTimeFormat("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+
+  return `${dateFormatter.format(date)} ${timeFormatter.format(date)}`;
+}
+
+// UPDATE TIME -------------------------------------------
+
+function updateTime() {
+  const date = document.getElementById("current-date");
+  if (date) {
+    date.innerHTML = dateFormat(new Date());
+  }
+}
+
+// Initial update
+updateTime();
+
+// Update every second
+setInterval(updateTime, 1000);
+
 // WINDOWS OPEN/CLOSE FUNCTIONALITY -------------------------------------------
 
 function openWindow(el: HTMLElement): void {
