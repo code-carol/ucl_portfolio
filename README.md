@@ -31,7 +31,6 @@ to-do
 - Write section about creating ts files again = lessons learned
 - Style menu
 - Add first project like a newspaper article
-- Change folder icons to open folders when clicked
 
 things that i want to add
 
