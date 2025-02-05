@@ -1,4 +1,4 @@
-# 💻 Engineering Foundation Year Portfolio
+# 💻 UCL Portfolio
 
 ### Simple webOS to showcase my first year university projects
 
