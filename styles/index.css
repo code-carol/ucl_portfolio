@@ -166,6 +166,8 @@ button {
   align-items: center;
   justify-content: start;
   width: 12rem;
+  height: 2.5rem;
+  margin-left: 1rem;
   box-shadow: -0.09rem -0.09rem 0 white,
     /* Top and left */ 0.09rem 0.09rem 0 black; /* Bottom and right */
 }
