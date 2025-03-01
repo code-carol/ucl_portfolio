@@ -111,7 +111,8 @@ button {
   flex-direction: row;
 }
 
-.icon {
+.icon,
+.icon-finder {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,10 +158,10 @@ button {
 }
 
 .tab-container {
-  display: none;
+  display: flex;
 }
 
-.tab {
+.tab-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
