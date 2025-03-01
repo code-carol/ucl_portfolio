@@ -25,8 +25,9 @@ allIcons.forEach((icon) => {
       if (window === "#finder" && imgElement && headingElement) {
         const imgSrc = imgElement.src;
         const headingText = headingElement.textContent || "";
+        const dataWindow = window;
         updateTitle(imgSrc, headingText);
-        showTab(imgSrc, headingText);
+        showTab(imgSrc, headingText, dataWindow);
       }
 
       if (content) {
@@ -41,23 +42,46 @@ allIcons.forEach((icon) => {
 
 // CLOSE BUTTONS  -------------------------------------------
 
-const allCloseBtn = document.querySelectorAll(".close-btn");
+// Select all close buttons
+const allCloseBtn = document.querySelectorAll<HTMLButtonElement>(".close-btn");
+// Select the container that holds the tabs
+const tabDiv = document.querySelector(".tab-container") as HTMLElement | null;
 
-allCloseBtn.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const window = btn.getAttribute("data-window");
-    if (window) {
-      const windowToClose = document.querySelector(window) as HTMLElement;
-      const tabToClose = document.querySelector(
-        `.tab-container [data-window="${window}"]`
-      ) as HTMLElement;
-      closeWindow(windowToClose);
-      hideTab(tabToClose);
-    } else {
-      console.error(`Element with selector "${window}" not found.`);
-    }
+if (tabDiv) {
+  allCloseBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Get the data-window attribute value from the clicked button
+      const windowSelector = btn.getAttribute("data-window");
+
+      if (windowSelector) {
+        // Find the window element using the selector
+        const windowToClose =
+          document.querySelector<HTMLElement>(windowSelector);
+        if (windowToClose) {
+          windowToClose.hidden = true;
+        } else {
+          console.error(`Element with selector "${windowSelector}" not found.`);
+        }
+
+        // Find the associated tab in the tab container
+        const tabToClose = tabDiv.querySelector(
+          `[data-window="${windowSelector}"]`
+        ) as HTMLElement | null;
+
+        if (tabToClose) {
+          // Hide the tab
+          hideTab(tabToClose);
+        } else {
+          console.error(`Tab with data-window="${windowSelector}" not found.`);
+        }
+      } else {
+        console.error("No data-window attribute found on the clicked button.");
+      }
+    });
   });
-});
+} else {
+  console.error("Tab container not found.");
+}
 
 // START BUTTON  -------------------------------------------
 
@@ -221,19 +245,27 @@ function updateTitle(imgSrc: string, headingText: string): void {
 }
 
 // SHOW/HIDE TAB FUNCTIONALITY -------------------------------------------
+const tabBtn = document.querySelector(".tab") as HTMLButtonElement | null;
 
-const tabImg = document.querySelector(".tab-img") as HTMLImageElement;
-const tabHeading = document.querySelector(".tab-heading") as HTMLElement;
-const tabDiv = document.querySelector(".tab-container") as HTMLElement;
+function showTab(
+  imgSrc: string,
+  headingText: string,
+  dataWindow: string
+): void {
+  const tabImg = document.querySelector(".tab-img") as HTMLImageElement;
+  const tabHeading = document.querySelector(".tab-heading") as HTMLElement;
 
-function showTab(imgSrc: string, headingText: string): void {
-  tabDiv.style.display = "flex";
-  tabImg.src = imgSrc;
-  tabHeading.textContent = headingText;
+  if (tabDiv && tabImg && tabHeading && tabBtn) {
+    tabBtn.setAttribute("data-window", dataWindow);
+    tabDiv.style.display = "flex";
+    tabImg.src = imgSrc;
+    tabHeading.textContent = headingText;
+  }
 }
 
 function hideTab(el: HTMLElement): void {
   if (el) {
+    console.log(el);
     el.style.display = "none";
   }
 }
