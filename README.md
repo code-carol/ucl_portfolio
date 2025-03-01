@@ -21,6 +21,7 @@
 ## 📚 Lessons Learned
 
 - In TS the void type represents the absence of a return value from a function.
+- Use [concurrently)](https://www.npmjs.com/package/concurrently) to run multiple commands.
 
 ## ✨ Inspiration
 
