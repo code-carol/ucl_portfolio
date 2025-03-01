@@ -1,12 +1,20 @@
 {
-  "name": "efy_portfolio",
+  "name": "ucl_portfolio",
   "version": "1.0.0",
+  "description": "Simple webOS to showcase my first year university projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "live-server .",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "typescript": "^5.8.2"
+  }
 }
