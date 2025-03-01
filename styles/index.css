@@ -93,6 +93,7 @@ button {
   height: 2.5rem;
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
+  margin-left: 0.5rem;
 }
 
 .date-time {
