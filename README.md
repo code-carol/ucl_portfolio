@@ -21,22 +21,23 @@
 ## 📚 Lessons Learned
 
 - In TS the void type represents the absence of a return value from a function.
-- Use [concurrently)](https://www.npmjs.com/package/concurrently) to run multiple commands.
+- Use [concurrently](https://www.npmjs.com/package/concurrently) to run multiple commands.
 
 ## ✨ Inspiration
 
 to-do
 
-- Recreate toggle for tabs - try different approach for the tabs
-- Make tabs open dynamically based on the window
-- Write section about creating ts files again = lessons learned
-- Style menu
-- Add first project like a newspaper article
+- add media queries
+- style menu
+- add first projects like a newspaper article
+- add txt files bin as negative emotions
+- add delete files btn bin
+- create functionality to delete files
+- add images to the img folder
+- when click on image make it bigger and add arrows for next img
 
 things that i want to add
 
 - calculator
 - paint
-- notepad
 - one game
-- chatbot
