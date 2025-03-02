@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  background-image: url(../assets/imgs/wallpaper.png);
+  background-image: url(/assets/imgs/wallpaper.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
