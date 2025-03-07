@@ -230,3 +230,26 @@ button {
   grid-template-columns: 1fr 3fr;
   height: calc(100% - 2rem);
 }
+
+@media (max-width: 600px) {
+  .menu-bar {
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .start-btn {
+    width: 7rem;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    margin-left: 0.3rem;
+  }
+
+  .date-time {
+    color: var(--softWhite);
+    margin-right: 3rem;
+  }
+
+  #current-date {
+    font-size: 1.2rem;
+  }
+}
