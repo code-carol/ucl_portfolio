@@ -139,7 +139,7 @@ function showContent(el: HTMLElement): void {
   });
 
   if (el) {
-    (el as HTMLElement).style.display = "flex";
+    (el as HTMLElement).style.display = "grid";
   }
 }
 
