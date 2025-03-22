@@ -41,3 +41,8 @@ things that i want to add
 - calculator
 - paint
 - one game
+
+links:
+https://www.theguardian.com/technology/2014/oct/02/from-windows-1-to-windows-10-29-years-of-windows-evolution
+
+https://jams.hackclub.com/batch/webOS/part-2
